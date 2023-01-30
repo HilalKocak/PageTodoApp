@@ -1,0 +1,79 @@
+{% extends 'core/base.html'%}
+
+{% block title %} {{ page_title }} {% endblock title %}
+
+{%block container-fluid%}
+       
+        {% include 'page/components/carousel.html' %}
+        {# we can send info or parameters to carousel.html with using *with* #}
+
+        {% include 'page/components/hero_components.html' with hero_title=page_title %}
+
+            <!-- ABOUT US-->
+            <div class="row bg-dark">
+                <div class="col-sm-6 p-0">
+                    <img src="https://picsum.photos/id/233/600/250" class="w-100" alt="...">
+
+                </div>
+                <div class="col-sm-6 bg-dark text-light d-flex justify-content-center align-items-center">
+                    <div class="text-center">
+                        <h2 class="display-2">About</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, provident.</p>
+                        <p>Ducimus facilis odit soluta inventore veniam quasi illo veritatis vel!</p>
+                        <p>Quisquam veritatis exercitationem deleniti, natus fugiat aut obcaecati repudiandae vero.</p>
+                    </div>
+                </div>
+            </div>
+   
+{%endblock container-fluid%}
+        <!--  HERO CONTENT END-->
+
+        <!-- ABOUT US END-->
+{%block container%}
+        <!-- PRODUCTS -->
+            <div class="row mt-3">
+                <div class="col-sm-12">
+                    <h2>Products</h2>
+                    <hr>
+                </div>
+                <div class="col-sm-4 mb-2">
+                    <div class="card">
+                        <!-- delete style-->
+                        <img src="https://picsum.photos/id/48/400/250" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Product 1</h5>
+                            <p class="card-text">Some quick example text to build on the Urun 1 and make up the bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Details</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-4 mb-2">
+                    <div class="card">
+                        <img src="https://picsum.photos/id/49/400/250" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Product 2</h5>
+                            <p class="card-text">Some quick example text to build on the Urun 1 and make up the bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Details</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-4 mb-2">
+                    <div class="card">
+                        <img src="https://picsum.photos/id/50/400/250" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Product 3</h5>
+                            <p class="card-text">Some quick example text to build on the Urun 1 and make up the bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Details</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+{%endblock container%}
+

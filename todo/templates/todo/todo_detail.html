@@ -1,0 +1,39 @@
+{% extends 'core/base.html' %}
+
+{% block container %}
+<div>
+
+
+   <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="{{ todo.category.get_absolute_url }}">{{ todo.category.title }}</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{ todo.title }}</li>
+    </ol>
+   </nav>
+
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ todo.title }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ todo.category }}</h6>
+            <p class="card-text">{{ todo.content }}</p>
+            <ul class="list-unstyled">
+                <li><small>Create time: {{ todo.created_at|date:"M/d/Y H:s" }}</small></li>
+                <li><small>Last Update time: {{ todo.updated_at|date:"M/d/Y H:s" }}</small></li>
+            </ul>
+            <ul class="list-inline">
+                {% for tag in todo.tag.all %}
+                <li class="list-inline-item">
+                    <a href="{{ tag.get_absolute_url }}">
+                        <span class="badge rounded-pill text-bg-primary">{{ tag }}</span>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+            <a href="/" class="card-link">Back</a>
+        </div>
+    </div>
+</div>
+
+{% endblock container %}

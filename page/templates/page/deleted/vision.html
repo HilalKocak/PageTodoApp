@@ -1,0 +1,72 @@
+{% extends 'core/base.html'%}
+{% block title %} {{ page_title }} {% endblock title %}
+
+{%block container-fluid%}
+<div class="container-fluid mb-5">
+    <div class="row">
+        <div class="col-sm-12 px-0">
+            <img src="https://picsum.photos/id/2/1200/450" alt="" class="w-100">
+        </div>
+    </div>
+
+    {% include 'page/components/hero_components.html' with hero_title=page_title %}
+
+
+{%endblock container-fluid%}
+{%block container%}
+            <div class="row-col-sm-10 offset-sm-1">
+
+                <div class="row">
+                    <div class="col-sm-8 offset-sm-2">
+                        <h2>Vision</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error architecto quos ab ipsum
+                            ullam
+                            deserunt. Praesentium delectus recusandae mollitia labore ut nihil quas, placeat officiis
+                            soluta
+                            ipsa qui rem perferendis!</p>
+                        <p>Eius aliquid delectus cupiditate impedit iste corrupti magni, ducimus dolor, velit, cum harum
+                            officia! Veritatis similique id, voluptatibus quod, aspernatur recusandae soluta unde,
+                            nostrum
+                            dolores incidunt facere facilis minus ut?</p>
+                        <p>Dolorem debitis est unde, amet accusantium sit aliquid incidunt quibusdam porro! Magni, iure
+                            in.
+                            Debitis tempora molestiae perferendis in iure libero numquam ducimus magni enim suscipit,
+                            ullam non
+                            minima temporibus.</p>
+                        <hr>
+                        <h2>Mission</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quae quas, dicta nobis
+                            maxime,
+                            mollitia pariatur ea doloribus sed quisquam, molestiae veritatis. Illo, nostrum temporibus?
+                            Quaerat,
+                            libero esse! Odit, quod.</p>
+                        <p>Illum voluptatem quibusdam quasi facere error eaque? Officia optio odit fuga consequuntur
+                            nobis modi,
+                            eligendi perferendis dolore expedita repudiandae ex reprehenderit vero dolorum sapiente
+                            dolorem
+                            ipsam culpa. Distinctio, quas fugit.</p>
+                        <p>Vero magni aspernatur beatae possimus nihil rem rerum illum sed? Animi expedita quam quae
+                            excepturi
+                            ducimus ut quas recusandae non dolore, dolor perferendis ea ex deleniti iste distinctio
+                            laboriosam
+                            quisquam.</p>
+                        <p>Optio earum nam illo vero nostrum officia hic odit itaque neque, praesentium consequuntur
+                            soluta cum
+                            sequi adipisci vel iste deserunt! Enim architecto earum eveniet blanditiis quasi. In labore
+                            fuga
+                            quibusdam.</p>
+                        <ul>
+                            <li>Lorem, ipsum.</li>
+                            <li>Laudantium, perspiciatis?</li>
+                            <li>Autem, corrupti?</li>
+                            <li>Nostrum, qui?</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+            </div>
+               
+     
+{%endblock container%}
