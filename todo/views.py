@@ -4,20 +4,20 @@ from .models import Todo, TodoCategory, TodoTag
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 
-# @login_required(login_url='/admin/login/')
-# def home_view(request):
-#     # todos = Todo.objects.all()
-#     # todos = Todo.objects.filter(is_active=True)
-#     # todos = Todo.objects.filter(title__icontains="todo")
-#     todos = Todo.objects.filter(
-#         is_active = True,
-#         user=request.user,
-#         #title__icontains="Todo",
-#     )
-#     context = dict(
-#         todos = todos,
-#     )
-#     return render(request, 'todo/todo_list.html', context)
+@login_required(login_url='/admin/login/')
+def all_todos_view(request):
+    # todos = Todo.objects.all()
+    # todos = Todo.objects.filter(is_active=True)
+    # todos = Todo.objects.filter(title__icontains="todo")
+    todos = Todo.objects.filter(
+        is_active = True,
+        user=request.user,
+        #title__icontains="Todo",
+    )
+    context = dict(
+        todos = todos,
+    )
+    return render(request, 'todo/todo_list.html', context)
 
 # def todo_detail_view(request, id):
 #     try:
