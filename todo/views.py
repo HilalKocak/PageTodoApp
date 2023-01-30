@@ -31,7 +31,7 @@ def all_todos_view(request):
 
 @login_required(login_url='/admin/login/')
 def category_view(request, category_slug):
-    category=get_object_or_404(Todo, slug=category_slug)
+    category=get_object_or_404(TodoCategory, slug=category_slug)
     todos = Todo.objects.filter(
         is_active = True,
         category=category,

@@ -22,7 +22,7 @@ urlpatterns = [
     path("", home_view, name="home"),
     
     #Todo App:
-    path('todo/', include('todo.urls')),
+    path('todo/', include('todo.urls', namespace='todo')),
     
     #AUTH
     path("account/logout/", logout_view, name="logout_view"),
