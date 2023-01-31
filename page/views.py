@@ -21,8 +21,8 @@ def home_view(request):
     context["FAKE_DB_CAROUSEL"] = FAKE_DB_CAROUSEL
     return render(request, "page/homepage.html", context)
 
-def page_view(request, slug):
-    result = list(filter(lambda x: (x['url']== slug), FAKE_DB_PAGES))
+def page_view(request, page_slug):
+    result = list(filter(lambda x: (x['url']== page_slug), FAKE_DB_PAGES))
     print((result))
 
     print("len result ", "*"*30)

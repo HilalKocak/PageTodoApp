@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 from django.db import models
 from autoslug import AutoSlugField
 from django.urls import reverse
-
+# Create your models here.
 class TodoCategory(models.Model):
     title = models.CharField(max_length=200)
     slug = AutoSlugField(populate_from='title', unique=True, )
