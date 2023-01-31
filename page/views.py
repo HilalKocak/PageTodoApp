@@ -1,8 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, Http404
 from random import sample
-import random
-from .fake_db.pages import FAKE_DB_PAGES
+from page.models import Page
 
 FAKE_DB_CAROUSEL = [
     f"https://picsum.photos/id/{id}/1200/400" for id in range(10,14)
@@ -22,16 +21,10 @@ def home_view(request):
     return render(request, "page/homepage.html", context)
 
 def page_view(request, page_slug):
-    result = list(filter(lambda x: (x['url']== page_slug), FAKE_DB_PAGES))
-    print((result))
+    page= get_object_or_404(Page, slug=page_slug)
 
-    print("len result ", "*"*30)
-    print(len(result))
-    if result:
-        context =  dict(
-        page_title= result[0]['title'],
-        detail = result[0]['detail'],
-        # FAKE_DB_PROJECTS = FAKE_DB_PROJECTS,
-        )
-        return render(request, "page/page_detail.html", context)
-    raise Http404
+    context=dict(
+        page=page,
+    )
+    return render(request, "page/page_detail.html", context)
+

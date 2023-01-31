@@ -1,5 +1,5 @@
 {% extends 'core/base.html'%}
-{% block title %}{{page_title}}{% endblock title %}
+{% block title %}{{ page.title }}{% endblock title %}
 
 
      {%block container-fluid%}
@@ -10,14 +10,14 @@
             </div>
         </div>
 
-        {% include 'page/components/hero_components.html' with hero_title=page_title %}
+        {% include 'page/components/hero_components.html' with hero_title=page.title %}
         
 
      {%endblock container-fluid%}
 
 {%block container%}
 
-   {{ detail|safe }}       
+   {{ page.content }}       
   
     
 {%endblock container%}

@@ -29,4 +29,8 @@ urlpatterns = [
     
     path("admin/", admin.site.urls),
 
+    #PAGE
+    path('page/', include('page.urls', namespace='page')),
+
+
 ]
