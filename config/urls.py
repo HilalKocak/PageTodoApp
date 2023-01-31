@@ -31,6 +31,9 @@ urlpatterns = [
     
     path("admin/", admin.site.urls),
 
+    #Tinymce
+    path('tinymce/', include('tinymce.urls')),
+
     #PAGE
     path('page/', include('page.urls', namespace='page')),
 

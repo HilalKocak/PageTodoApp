@@ -1,7 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
-from autoslug import AutoSlugField
 from django.urls import reverse
+#Third party apps
+from autoslug import AutoSlugField
+from tinymce.models import HTMLField
 
 # Create your models here.
 class Page(models.Model):
@@ -9,7 +11,7 @@ class Page(models.Model):
     title = models.CharField(max_length=200)
     slug = AutoSlugField(populate_from='title', unique=True, )
     cover_image = models.ImageField(upload_to ='page/')    
-    content = models.TextField(blank=True, null=True)
+    content = HTMLField(blank=True, null=True)
     is_active = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

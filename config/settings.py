@@ -25,12 +25,16 @@ SECRET_KEY = "django-insecure-jufp-s)pm0!*3)7iwn=47kn2lg0b*0ab0^#!ny&sbdv-m9tbbz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    '192.168.1.33',
+    'djangomania.com',
+]
 
 
 # Application definition
 THIRD_PARTY_APPS = [
-
+    'tinymce',
 ]
 
 MY_APPS = [
