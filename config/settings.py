@@ -38,8 +38,8 @@ THIRD_PARTY_APPS = [
 ]
 
 MY_APPS = [
+    'blog',
     'todo',
-    #'blog',
     'page',
 ]
 
