@@ -57,7 +57,10 @@ class Post(models.Model):
     tag=models.ManyToManyField(BlogTag)
     cover_image = models.ImageField(upload_to ='post/')    
     title = models.CharField(max_length=200)
-    slug = AutoSlugField(populate_from='title', unique=True, )
+    slug = AutoSlugField(populate_from='title', 
+    unique=True, 
+    #blank=True,
+    )
     content = HTMLField(blank=True, null=True)
     is_active = models.BooleanField(default=False)
     view_count = models.PositiveBigIntegerField(default=0)    
