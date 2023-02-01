@@ -15,9 +15,12 @@ for id in range(21):
 
     i=Post.objects.last()
 
+    
+# add slug via shell
 for item in items:
     item.slug=f"{slugify(item.title)}-{item.pk}"
+    item.save()
 
-# add skug via shell
+
 for item in items:
     print(item.slug)
