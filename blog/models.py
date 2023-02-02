@@ -23,14 +23,13 @@ class BlogCategory(models.Model):
     def __str__(self):
         return self.title
 
-    # TODO get_absolute_url    
-    # def get_absolute_url(self):
-    #     return reverse(
-    #         'todo:category_view', # category_view must be unique bcz of that we wrote namespace 
-    #         kwargs={
-    #             "category_slug": self.slug,
-    #         }
-    #     )
+    def get_absolute_url(self):
+        return reverse(
+            'blog:category_view', # category_view must be unique bcz of that we wrote namespace 
+            kwargs={
+                "category_slug": self.slug,
+            }
+        )
 
 class BlogTag(models.Model):
     title = models.CharField(max_length=200)
