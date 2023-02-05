@@ -13,15 +13,15 @@
         {% endif %}
             {% for post in posts %}
             <div class="col-mb-3">
-                <div class="card">
+                <div class="card h-100">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm">
-                                <img src="{{ post.cover_image.url }}" alt="" class="w-100 img-thumbnail">
+                                <img src="{{ post.cover_image.url }}" alt="" class="w-100 img-thumbnail" style="width: 18rem; height: 20rem;">        
                             </div>
                             <div class="col-sm">
                                 <h5 class="card-title">{{ post.title }}</h5>
-                                <p class="card-text">{{ todo.content }}</p>
+                                <p class="card-text">{{ post.content|safe|truncatewords_html:10 }}</p>
                                 <ul class="list-inline">
                                     {% for tag in post.tag.all %}
                                     <li class="list-inline-item">
@@ -31,7 +31,7 @@
                                     </li>
                                     {% endfor %}
                                 </ul>
-                                <a href="/" class="card-link">Details</a>
+                                <a href="{{ post.get_absolute_url }}" class="card-link">Details</a>
                             </div>
                         </div>
                     </div>

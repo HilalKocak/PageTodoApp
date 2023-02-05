@@ -19,4 +19,5 @@ class PostAdmin(admin.ModelAdmin):
         'id',
         'title',
         'is_active',
+        'view_count',
     ]
