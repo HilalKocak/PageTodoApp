@@ -25,13 +25,13 @@ python-slugify==8.0.0
 ## Picture Belongs to Site
 ### Admin Page
 ![Sample site](config/assets/2.png)
-
+<br/><br/>
 ### Home Page
 ![Sample site](config/assets/1.png)
-
+<br/><br/>
 ### Todo Details Page
 ![Sample site](config/assets/3.png)
-
+<br/><br/>
 ### Blog Post Details Page
 ![Sample site](config/assets/4.png)
 
