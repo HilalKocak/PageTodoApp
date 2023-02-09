@@ -1,4 +1,14 @@
-# Blog, Todo Pages
+# This project is Blog App with Todo List
+
+## Project Goals
+- Combining bootstrap design files with todo app
+- Development of Django model structure
+- Django ORM usage
+- Using Slugs
+- global_context_processors usage
+- Media Root Usage
+- Tinymce usage
+- Pagination
 
 ## Requirements
 ```Django==4.1.5
@@ -13,9 +23,15 @@ python-slugify==8.0.0
 ```python manage.py runserver```
 
 ## Picture Belongs to Site
+### Admin Page
+![Sample site](config/assets/2.png)
 
-![Sample site](config/assets/Screenshot%202023-02-05%20at%2021.05.12.png)
+### Home Page
+![Sample site](config/assets/1.png)
 
-![Sample site](config/assets/Screenshot%202023-02-05%20at%2021.05.26.png)
+### Todo Details Page
+![Sample site](config/assets/3.png)
 
-![Sample site](config/assets/Screenshot%202023-02-05%20at%2021.05.39.png)
+### Blog Post Details Page
+![Sample site](config/assets/4.png)
+
